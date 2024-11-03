@@ -2,7 +2,7 @@ print("\nIt's so funny to look back to Python")
 print("If only I can spend more time for Python..")
 print("but eventhough Java is interesting too :]\n")
 
-a = [1,2,3,4]
+a = [1, 2, 3, 4]
 # a=[print(f'{i} - {elem}' for i, elem in enumerate(a))]
 # print("\n".join(f"{i+1} - {elem}" for i, elem in enumerate(a)))
 # print('\n\n')
@@ -17,8 +17,8 @@ a = [1,2,3,4]
 # numbers = {x: "even" if x % 2 == 0 else "odd" for x in range(10)}
 # print(numbers)
 
-evens = lambda x: [i for i in x if i % 2 == 0 ]
-evens = lambda x: [i if i % 2 == 0 else None for i in x  ]
+evens = lambda x: [i for i in x if i % 2 == 0]
+evens = lambda x: [i if i % 2 == 0 else None for i in x]
 print(evens([3, 4, 3, 2]))  # Output: [0, 2, 4, 6, 8]
 
 
@@ -47,7 +47,21 @@ def case_two():
 cases = {1: case_one, 2: case_two}
 print(cases.get(4, lambda: "Default case")())
 
-list1=[i+1 for i in range(3)]
-list2=[i+1 for i in range(3)]
+list1 = [i + 1 for i in range(3)]
+list2 = [i + 1 for i in range(3)]
 matrix = [[i * j for j in list1] for i in list2]
-print('\n'.join(f'{elem}' for elem in matrix))
+print("\n".join(f"{elem}" for elem in matrix))
+
+
+a, b, c = 1, 2, 3
+
+
+def increase():
+    global a, b, c
+    c += 1
+    a += 1
+    b += 1
+
+
+increase()
+print(a, b, c)
